@@ -8,8 +8,8 @@ scene.fill([0,0,0])
 grid_height = 25
 grid_width = 12
 
-g1 = grid.Grid(scene, grid_height, grid_width, 25,25, 64,650, [255,255,255])
-g2 = grid.Grid(scene, grid_height, grid_width, 25, 25, 500, 650, [255,255,255])
+g1 = grid.Grid(scene, grid_height, grid_width, 25,25, 64,650, [255,255,255], [0,0,0])
+g2 = grid.Grid(scene, grid_height, grid_width, 25, 25, 500, 650, [255,255,255], [0,0,0])
 
 g1.setup()
 g2.setup()
