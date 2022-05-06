@@ -55,9 +55,13 @@ class Grid:
         pygame.draw.rect(self.screen, grid_object.color,grid_object.rect)
         pygame.draw.rect(self.screen,self.grid_color,grid_object.rect,2)
 
+
+    
     def get_color(self, position):
         return self.graphics_grid[position[0]][position[1]].color
-    
+    def get_presence(self, position):
+        '''Returns whether a block is there'''
+        return self.graphics_grid[position[0]][position[1]].block_present
     def get_height(self):
         return self.height
     def get_width(self):
