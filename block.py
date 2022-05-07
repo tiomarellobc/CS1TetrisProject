@@ -18,4 +18,4 @@ class block:
     def draw(self):
         for x in self.blockdef:
             for y in self.blockdef[x]:
-                self.grid.fill((x,y), [100,100,100])
+                self.grid.fill((x,y), color)
