@@ -16,6 +16,9 @@ class block:
             self.blockdef={3:[0,1],4:[0,1]}
         if(letter== "J"):
             self.blockdef={0:[2],1:[2],3:[1,2]}
+        if(letter == "L"):
+            self.blockdef = {0 : [1,2], 1: [2], 2: [2] ,3 : [2]}
+            self.color = [0, 255, 255]
     def draw(self):
         for x in self.blockdef:
             for y in self.blockdef[x]:
