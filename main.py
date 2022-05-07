@@ -22,7 +22,11 @@ running = True
 TICK = pygame.USEREVENT + 1
 pygame.time.set_timer(TICK, 200)
 
+<<<<<<< HEAD
 lblock = block.block(g1,"Z")
+=======
+lblock = block.block(g1,"O")
+>>>>>>> faa7ef6c53738775b7b49a912888468b7f072e7c
 
 i=0
 while running:
