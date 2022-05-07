@@ -21,7 +21,7 @@ running = True
 #Events
 TICK = pygame.USEREVENT + 1
 pygame.time.set_timer(TICK, 200)
-lblock = block.block(g1,"T")
+lblock = block.block(g1,"O")
 
 
 i=0
