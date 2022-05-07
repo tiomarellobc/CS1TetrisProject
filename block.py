@@ -7,10 +7,13 @@ class block:
         self.grid = grid
         if(letter == "I"):
             self.blockdef = {2: [0,1,2,3]}
+            self.color = [100,200,100]
         if(letter == "S"):
             self.blockdef = {0:[1], 1:[1,2], 2:[2]}
+            self.color = [0,255,0]
         if (letter == "T"):
             self.blockdef = {0:[2], 1:[1,2], 2:[2]}
+            self.color = [127, 0, 255]
         if(letter== "O"):
             self.blockdef= {3:[0,1],4:[0,1]}
         if(letter== "J"):
