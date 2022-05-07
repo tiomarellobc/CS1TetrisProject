@@ -20,6 +20,9 @@ class block:
         if(letter == "Z"):
             self.blockdef ={0:[2],1:[1,2],2:[1]}
             self.color = [255,0,0]
+        if(letter == "L"):
+            self.blockdef = {0 : [1,2], 1: [2], 2: [2] ,3 : [2]}
+            self.color = [255, 128, 0]
     def draw(self):
         for x in self.blockdef:
             for y in self.blockdef[x]:
