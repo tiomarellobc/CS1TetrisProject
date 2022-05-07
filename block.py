@@ -12,9 +12,9 @@ class block:
         if (letter == "T"):
             self.blockdef = {0:[2], 1:[1,2], 2:[2]}
         if(letter== "O"):
-            self.blockdef={3:[0,1],4:[0,1]}
+            self.blockdef= {3:[0,1],4:[0,1]}
         if(letter== "J"):
-            self.blockdef={0:[2],1:[2],3:[1,2]}
+            self.blockdef= {0:[2],1:[2],3:[1,2]}
     def draw(self):
         for x in self.blockdef:
             for y in self.blockdef[x]:
