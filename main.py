@@ -18,10 +18,11 @@ g1.setup()
 g2.setup()
 
 running = True
-b = block.block(g1)
 #Events
 TICK = pygame.USEREVENT + 1
 pygame.time.set_timer(TICK, 200)
+
+lblock = block.block(g1,"I")
 
 i=0
 while running:
@@ -30,7 +31,7 @@ while running:
             running = False
         if events.type == TICK:
             pass
-    b.draw()
+    lblock.draw()
 
     pygame.display.update()
     
