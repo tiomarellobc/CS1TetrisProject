@@ -3,7 +3,8 @@ import grid
 
 class block:
 
-    def __init__(self, grid, letter):
+    def __init__(self, grid, letter, color):
+        self.color = color
         self.grid = grid
         if(letter == "I"):
             self.blockdef = {2: [0,1,2,3]}
@@ -12,4 +13,4 @@ class block:
     def draw(self):
         for x in self.blockdef:
             for y in self.blockdef[x]:
-                self.grid.fill((x,y), [100,100,100])
+                self.grid.fill((x,y), self.color)
