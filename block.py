@@ -7,6 +7,10 @@ class block:
         self.grid = grid
         if(letter == "I"):
             self.blockdef = {2: [0,1,2,3]}
+        if(letter == "S"):
+            self.blockdef = {0:[1], 1:[1,2], 2:[2]}
+        if (letter == "T"):
+            self.blockdef = {0:[2], 1:[1,2], 2:[2]}
     
     def draw(self):
         for x in self.blockdef:
