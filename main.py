@@ -23,6 +23,10 @@ TICK = pygame.USEREVENT + 1
 pygame.time.set_timer(TICK, 200)
 lblock = block.block(g1,"O")
 
+<<<<<<< HEAD
+=======
+lblock = block.block(g1,"I")
+>>>>>>> acab717606d94b262b6673afaa055526c5fbdbf4
 
 i=0
 while running:
