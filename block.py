@@ -7,6 +7,7 @@ class block:
         self.grid = grid
         if(letter == "I"):
             self.blockdef = {2: [0,1,2,3]}
+            self.color = [100,200,100]
         if(letter == "S"):
             self.blockdef = {0:[1], 1:[1,2], 2:[2]}
         if (letter == "T"):
@@ -18,4 +19,4 @@ class block:
     def draw(self):
         for x in self.blockdef:
             for y in self.blockdef[x]:
-                self.grid.fill((x,y))
+                self.grid.fill((x,y), self.color)
