@@ -13,12 +13,9 @@ class block:
             self.blockdef = {0:[2], 1:[1,2], 2:[2]}
         if(letter== "O"):
             self.blockdef={3:[0,1],4:[0,1]}
-<<<<<<< HEAD
         if(letter== "J"):
             self.blockdef={0:[2],1:[2],3:[1,2]}
-=======
->>>>>>> 0695b85777261a5c09f15ed9d16983b7da1f2f16
     def draw(self):
         for x in self.blockdef:
             for y in self.blockdef[x]:
-                self.grid.fill((x,y), [100,100,100])
+                self.grid.fill((x,y), color)
