@@ -21,12 +21,8 @@ running = True
 #Events
 TICK = pygame.USEREVENT + 1
 pygame.time.set_timer(TICK, 200)
-lblock = block.block(g1,"O")
 
-<<<<<<< HEAD
-=======
-lblock = block.block(g1,"I")
->>>>>>> acab717606d94b262b6673afaa055526c5fbdbf4
+lblock = block.block(g1,"O")
 
 i=0
 while running:
@@ -34,8 +30,8 @@ while running:
         if events.type == pygame.QUIT:
             running = False
         if events.type == TICK:
-            pass
-    lblock.draw()
+            lblock.move(0, -1)
+    
 
     pygame.display.update()
     
