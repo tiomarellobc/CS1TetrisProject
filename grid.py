@@ -1,3 +1,4 @@
+from turtle import color
 import pygame
 
 class Grid_Block:
@@ -6,6 +7,10 @@ class Grid_Block:
         self.rect = rect
         self.color = color
         self.block_present = block_present
+    def copy(self, newGrid_Block):
+        self.color = newGrid_Block.color
+        self.block_present = newGrid_Block.block_present
+        
 
 class Grid:
     '''Creates a grid height blocks tall and width blocks wide, each block being pixelheight in height and pixelwidth in width.'''
@@ -14,6 +19,7 @@ class Grid:
         self.screen = screen
         self.height = height
         self.width = width
+        '''How wide the grid is in terms of blocks.'''
         self.pixelheight = pixelheight
         self.pixelwidth = pixelwidth
         self.left = left
@@ -59,7 +65,38 @@ class Grid:
     
     def get_color(self, position):
         return self.graphics_grid[position[0]][position[1]].color
-    def get_presence(self, position):
+    
+    def check_valid_position(self, position):
+        '''Check if position is inside grid'''
+
+        #Check if x position is inside the grid
+        if(position[0] >= 0 and position[0] < self.width):
+            #Check if y position is inside the grid
+            if(position[1] >= 0 and position[1] < self.height):
+                return True
+        
+        return False
+    
+    def check_line(self, line):
+        for i in range(self.width):
+            if(self.graphics_grid[i][line].block_present == False):
+                return False
+        return True
+    def clear_line(self, line):
+        for i in range(self.width):
+            self.clear((i,line))
+        for x in range(self.width):
+            for y in range(line, self.height-1):
+                self.graphics_grid[x][y].copy(self.graphics_grid[x][y+1])
+        for x in range(self.width):
+            for y in range(self.height):
+                if(self.graphics_grid[x][y].block_present == True):
+                    self.fill((x,y), self.graphics_grid[x][y].color)
+                else:
+                    self.clear((x,y))
+                
+        
+    def check_position_filled(self, position):
         '''Returns whether a block is there'''
         return self.graphics_grid[position[0]][position[1]].block_present
     def get_height(self):
