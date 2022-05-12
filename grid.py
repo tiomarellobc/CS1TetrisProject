@@ -100,13 +100,13 @@ class Grid:
                 else:
                     self.clear((x,y))
     def clear_all_lines(self):
-        #Moves downward frmo the top, as this allows 
+        #Clears downward from the top, as this allows mulitple lines to be cleared without having to call the function multiple times
         cleared_line = False
         for i in range(self.get_height()-1, -1, -1):
                     if(self.check_line(i) == True):
                         self.clear_line(i)
                         cleared_line = True
-        print(cleared_line)
+        
         return cleared_line
         
     def move_up(self):
